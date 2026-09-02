@@ -4,18 +4,17 @@ class Solution:
         r = 0
         ml = float('inf')
         sum = 0
-        
         for r in range(len(nums)):
             sum += nums[r]
             while sum >= target:
                 ml = min(r-l+1,ml)
                 sum -= nums[l]
                 l += 1
-
-                
-        if ml == float('inf'):
+        if ml == float('inf') :
             return 0
-        else : 
+        else :
             return ml
+
+
 
             
